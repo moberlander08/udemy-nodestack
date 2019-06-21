@@ -6,8 +6,8 @@ services:
 before_install:
   - docker image build -t moberlander08/react-test -f ./client/Dockerfile.dev ./client
 
-script:
-  - docker run moberlander08/react-test npm-test -- --coverage 
+#script:
+  - docker container run moberlander08/react-test npm test -- --coverage 
 
 after_success:
   #buld the docker images 
